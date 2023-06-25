@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.travelsimply.Menu">
+   <children>
+      <Button fx:id="newTripBtn" layoutX="663.0" layoutY="233.0" mnemonicParsing="false" onAction="#saveTrip" text="Create new trip" />
+      <Text fx:id="username" layoutX="29.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="130.93670654296875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="logoutBtn" layoutX="25.0" layoutY="380.0" mnemonicParsing="false" onAction="#logOut" prefHeight="26.0" prefWidth="82.0" text="Log out" />
+      <TableView fx:id="tripTable" layoutX="29.0" layoutY="108.0" prefHeight="227.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="tripnameCol" prefWidth="129.60000038146973" text="Tripname" />
+            <TableColumn fx:id="travelerCol" prefWidth="117.60003662109375" text="Traveler" />
+            <TableColumn fx:id="destinationCol" prefWidth="124.0" text="Destination" />
+            <TableColumn fx:id="cityCol" prefWidth="132.00003051757812" text="Destination City" />
+            <TableColumn fx:id="inviteds" prefWidth="119.99997558593748" text="Invited travelers" />
+        </columns>
+      </TableView>
+      <Text layoutX="29.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trips" wrappingWidth="75.73669815063477">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="destinationField" layoutX="663.0" layoutY="149.0" promptText="destination" />
+      <TextField fx:id="destinationCityField" layoutX="663.0" layoutY="189.0" promptText="destination City" />
+      <Button fx:id="inviteBtn" layoutX="277.0" layoutY="380.0" mnemonicParsing="false" onAction="#createInvitation" prefWidth="88.0" text="Invite traveler" />
+      <TextField fx:id="tripnameField" layoutX="663.0" layoutY="108.0" promptText="destination" />
+      <Button fx:id="SaveChanges" layoutX="663.0" layoutY="271.0" mnemonicParsing="false" onAction="#saveChanges" text="Save changes" />
+      <Button fx:id="ChangeTtrip" layoutX="576.0" layoutY="380.0" mnemonicParsing="false" onAction="#changeTrip" text="Change trip" />
+      <Button layoutX="274.0" layoutY="444.0" mnemonicParsing="false" onAction="#clearSelection" text="Clear selection" />
+      <Text fx:id="notCollabtxt" layoutX="663.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You cannot edit this trip. You are not collaborator." visible="false" wrappingWidth="97.60000000000014" />
+   </children>
+</AnchorPane>
